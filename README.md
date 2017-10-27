@@ -15,6 +15,7 @@ Head to the [Releases](https://github.com/Seriell/RC24-MailPatch-Portable/releas
 If you make changes to this repo, you can generate new packages with ease.
 
 ### You will need (For building, not running)
+- Access to a Linux or macOS system/VM (If on Windows, WSL works.) Even if compiling for Windows, you must be on *nix.
 - Ruby 2.1 (This specific version is needed, I recommend using RVM.
 - Bundler
 - Rake
