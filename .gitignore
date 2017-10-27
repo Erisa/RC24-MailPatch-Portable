@@ -1,3 +1,4 @@
 Gemfile.lock
 packaging/*.tar.gz
 packaging/vendor/
+nwc24msg.cfg

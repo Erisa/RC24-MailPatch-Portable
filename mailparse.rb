@@ -80,17 +80,28 @@ module SerieBot
       # Many thanks to AwesomeMarioFan for helping me out with this 
       checksum_final = checksum & 0xFFFFFFFF 
       cfg.checksum.assign(BinData::Uint32be.new(checksum_final).to_binary_s) 
+	  
+ 	  
  
       File.open('nwc24msg.cfg', 'wb') do |converted_file| 
         begin 
+			puts "Patching file..."
           cfg.write(converted_file) 
         rescue IOError 
+			"An error has occured!"
           return 4 
         end 
       end 
       # Success! 
+	  puts "Patched successfully!"
       1 
     end 
+	
+	unless File.exists?('nwc24msg.cfg')
+		puts "You don't have a nwc24msg.cfg in the same directory as this application!"
+		puts "Place the file to patch here and try again..."
+		exit
+	  end
  
     convert_mail('nwc24msg.cfg') 
   end 
