@@ -2,7 +2,7 @@
 require 'bundler/setup'
 
 PACKAGE_NAME = "Mail-Patch-Portable"
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 TRAVELING_RUBY_VERSION = "20150210-2.1.5"
 
 desc "Package your app"
